@@ -82,7 +82,10 @@ public class Testeur {
 
 						System.out.println(" Saisissez le groupeID dans lequel vous souhaitez ajouter un contact \n");
 						String idGroup = sc.nextLine();
-						
+
+						System.out.println(" Voici les contacts existants \n");
+						String lesContacts = refBean.getLesContactsWithID();
+						System.out.println(lesContacts);
 						System.out.println(" Veuillez saisir l'ID du contact \n");
 						System.out.println(" IDContact :");
 						String idContact=sc.nextLine();

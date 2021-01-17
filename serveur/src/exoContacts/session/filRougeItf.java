@@ -12,5 +12,6 @@ public interface filRougeItf {
 	public List<String> getLesNumeros(String groupName);
 	public List<String> getLesGroupes();
 	public String getLesGroupesWithID();
+	public String getLesContactsWithID();
 	public void findGroupIdByName(String name);
 }

@@ -93,7 +93,17 @@ public class filRougeBean implements filRougeItf {
 		}
 		return stb.toString();
 	}
-	
+
+	public String getLesContactsWithID(){
+		List<ContactEntity> contacts = em.createQuery("SELECT c FROM ContactEntity c").getResultList();
+		StringBuilder stb = new StringBuilder();
+		for (ContactEntity c : contacts)
+		{
+			stb.append(c.getId() + " - " + c.getFirstName() + "-" + c.getLastName() + "\n");
+		}
+		return stb.toString();
+	}
+
 	public void findGroupIdByName(String name){
 		String sql="SELECT idGroup FROM GroupEntity ge WHERE ge.name = '"+name+"'";
 		em.createQuery(sql).getSingleResult().toString();

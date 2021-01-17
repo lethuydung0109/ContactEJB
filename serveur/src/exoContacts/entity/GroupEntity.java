@@ -8,7 +8,7 @@ import java.util.*;
 public class GroupEntity {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
     private long idGroup;
     private String name;
